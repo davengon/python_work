@@ -1,0 +1,21 @@
+class User:
+
+    def __init__(self, first_name, last_name, phone_number, id):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.phone_number = phone_number
+        self.id = id
+    
+    def describe_user(self):
+        print(f"The user's name is: {self.first_name + " " + self.last_name}, their phone number is {self.phone_number}, and their id is: {self.id}")
+    
+    def greet_user(self):
+        print(f"Hello, {self.first_name}, welcome back!")
+    
+first_user = User("David", "Gallego", "154654654", "0001")
+second_user = User("Santiago", "Gal", "464564654", "0002")
+
+first_user.greet_user()
+first_user.describe_user()
+second_user.greet_user()
+second_user.describe_user()
