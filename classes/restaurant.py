@@ -11,6 +11,13 @@ class Restaurant:
     def open_restaurant(self):
         print(f"The restaurant {self.restaurant_name} is open!")
 
+    def set_numer_served(self, new_customers):
+        self.number_served = new_customers
+
+    def increment_number_served(self, new_customers):
+        self.number_served += new_customers
+        
+
 my_restaurant = Restaurant("Lime Ceviche", "Peruvian")
 print(my_restaurant.restaurant_name)
 print(my_restaurant.cuisine_type)
@@ -26,3 +33,9 @@ restaurant = Restaurant("Arepas y Arepas", "Colombian")
 print(f"The restaurant has served {restaurant.number_served} customers")
 restaurant.number_served = 10
 print(f"The restaurant has served {restaurant.number_served} customers")
+restaurant.set_numer_served(25)
+print(f"The restaurant has served {restaurant.number_served} customers")
+restaurant.increment_number_served(55)
+print(f"The restaurant has served {restaurant.number_served} customers")
+
+
