@@ -15,3 +15,8 @@ print(my_restaurant.restaurant_name)
 print(my_restaurant.cuisine_type)
 my_restaurant.describe_restaurant()
 my_restaurant.open_restaurant()
+
+second_restaurant = Restaurant("Coconut Water", "Puerto Rican")
+third_restaurant = Restaurant("Shinto", "Japanese")
+second_restaurant.describe_restaurant()
+third_restaurant.describe_restaurant()
