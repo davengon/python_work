@@ -3,6 +3,7 @@ class Restaurant:
     def __init__(self, restaurant_name, cuisine_type):
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
+        self.number_served = 0
 
     def describe_restaurant(self):
         print(f"Our restaurant is called: {self.restaurant_name}, and we work with {self.cuisine_type} cuisine!")
@@ -20,3 +21,8 @@ second_restaurant = Restaurant("Coconut Water", "Puerto Rican")
 third_restaurant = Restaurant("Shinto", "Japanese")
 second_restaurant.describe_restaurant()
 third_restaurant.describe_restaurant()
+
+restaurant = Restaurant("Arepas y Arepas", "Colombian")
+print(f"The restaurant has served {restaurant.number_served} customers")
+restaurant.number_served = 10
+print(f"The restaurant has served {restaurant.number_served} customers")
