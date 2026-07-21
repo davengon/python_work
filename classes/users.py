@@ -23,14 +23,21 @@ class Admin(User):
 
     def __init__(self, first_name, last_name, phone_number, id):
         super().__init__(first_name, last_name, phone_number, id)
+        self.priviliges = Privilites()
+    
+
+
+class Privilites():
+
+    def __init__(self):
         self.priviliges = ["Can add post", "Can delete post", "can edit post"]
     
     def show_priviliges(self):
         print("These are your priviliges: \n")
         for power in self.priviliges:
             print(power)
+        
 
-    
 first_user = User("David", "Gallego", "154654654", "0001")
 second_user = User("Santiago", "Gal", "464564654", "0002")
 
@@ -46,4 +53,5 @@ first_user.reset_login_attempts()
 print(first_user.login_attempts)
 
 new_admin = Admin("David", "Gallego", "2224", "00001")
-new_admin.show_priviliges()
+new_admin.priviliges.show_priviliges()
+
