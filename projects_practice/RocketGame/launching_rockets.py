@@ -30,6 +30,7 @@ class Rocket_Game:
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
+                print(event.key)
             elif event.type == pygame.KEYUP:
                 self._check_keyup_events(event)
 
